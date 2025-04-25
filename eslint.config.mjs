@@ -8,4 +8,14 @@ export default defineConfig([
   { files: ["**/*.{js,mjs,cjs,ts}"], plugins: { js }, extends: ["js/recommended"] },
   { files: ["**/*.{js,mjs,cjs,ts}"], languageOptions: { globals: globals.browser } },
   tseslint.configs.recommended,
+
+  { languageOptions: { globals: globals.browser } },
+  {
+    rules: {
+      eqeqeq: "off",
+      "no-unused-vars": "error",
+      "prefer-const": ["error", { ignoreReadBeforeAssign: true }],
+    },
+  },
+  {ignores: [".node_modules/*"]}
 ]);
