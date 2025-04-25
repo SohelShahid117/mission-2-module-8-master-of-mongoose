@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 // const express = require('express')
 const express_1 = __importDefault(require("express"));
+// import cors from "cors"
 const app = (0, express_1.default)();
 // const port = 3000
 //parser
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
     console.log(a);
     res.send('Hello World!');
 });
-console.log("current work directory is :" + process.cwd());
+console.log('current work directory is :' + process.cwd());
 // app.listen(port, () => {
 //   console.log(`Example app listening on port ${port}`)
 // })

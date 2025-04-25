@@ -15,7 +15,13 @@ export default defineConfig([
       eqeqeq: "off",
       "no-unused-vars": "error",
       "prefer-const": ["error", { ignoreReadBeforeAssign: true }],
+      // "no-unused-expression":"error",
+      "no-console":"warn",
+      "no-undef":"error"
     },
+    "globals":{
+      "process":"readonly"
+    }
   },
   {ignores: [".node_modules/*"]}
 ]);
