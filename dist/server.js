@@ -8,6 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+Object.defineProperty(exports, "__esModule", { value: true });
+const dotenv_1 = require("dotenv");
 // getting-started.js
 const mongoose = require('mongoose');
 // main().catch(err => console.log(err));
@@ -18,6 +20,6 @@ function main() {
         // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
     });
 }
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+app.listen(dotenv_1.config.port, () => {
+    console.log(`Example app listening on port ${dotenv_1.config.port}`);
 });
